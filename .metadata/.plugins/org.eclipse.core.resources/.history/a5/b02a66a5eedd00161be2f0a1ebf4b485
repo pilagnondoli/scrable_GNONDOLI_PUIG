@@ -1,0 +1,17 @@
+package fr.esiea.gnondoli.puig.pot_commun;
+
+
+import java.util.ArrayList;
+import fr.esiea.gnondoli.puig.bag.Bag;
+
+public class PotCommun extends Bag{
+	protected static ArrayList<String> tas = new ArrayList<String>();
+	
+	public static void DebutDeTour(){
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+	}
+	
+	
+	
+}

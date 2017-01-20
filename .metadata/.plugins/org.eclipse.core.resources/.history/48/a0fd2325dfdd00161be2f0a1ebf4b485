@@ -1,0 +1,30 @@
+package fr.esiea.gnondoli.puig.bag;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Bag {
+	public static void main(String[] args) {
+		 
+		 ArrayList<String> maListe = new ArrayList<String>();
+		 /* add(element) : Ajout d'un element dans la liste*/
+		 maListe.add("Permier Element" );
+		 maListe.add("Second Element" );
+		 maListe.add("Troisieme Element" );
+		 maListe.add("Quatrieme Element" );
+		 maListe.add("Cinquieme Element" );
+		 
+		 for(int i = 0 ; i < maListe.size(); i++){
+		 	
+		 	String maValeur = maListe.get(i);
+		 	System.out.println(maValeur);
+		 }
+		 
+		 Iterator<String> it = maListe.iterator();
+		 while(it.hasNext()){
+		 	
+		 	System.out.println(it.next());
+		 }
+	}
+
+}

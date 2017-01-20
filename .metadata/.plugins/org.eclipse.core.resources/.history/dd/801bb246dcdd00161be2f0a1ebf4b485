@@ -1,0 +1,73 @@
+package fr.esiea.gnondoli.puig.bag;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Bag {
+	public static void main(String[] args) {
+		 /* Une ArrayList de String
+		  *   
+		  *  Ex : Une ArrayList de "Fromage"
+		  *  ArrayList<Fromage> mesFromages = new ArrayList<Fromage>();
+		  *  
+		  */
+		 ArrayList<String> maListe = new ArrayList<String>();
+		 /* add(element) : Ajout d'un element dans la liste*/
+		 maListe.add("Permier Element" );
+		 maListe.add("Second Element" );
+		 maListe.add("Troisieme Element" );
+		 maListe.add("Quatrieme Element" );
+		 maListe.add("Cinquieme Element" );
+		 /* maListe.size() : retourne le nombre d'element de la liste */
+		 for(int i = 0 ; i < maListe.size(); i++){
+		 	/* maListe.get(i) : retourne le ième element de la liste qui est déjà une String vu que l'ArrayList est une ArrayList de String  
+		   *
+		   * Autrement la version < java 5 :  
+		   *  
+		   *  	ArrayList maliste = new ArrayList();
+		   *  	maListe.add(monFromage);
+		   *  	Fromage monFromage = (Fromage)maListe.get(0);
+		   *  
+		   */
+		 	String maValeur = maListe.get(i);
+		 	System.out.println(maValeur);
+		 }
+		 /* add(index,element) : Ajout d'un element dans la liste à la position passée en paramètre (index)  
+		  * Attention les index commencent à 0
+		  */
+		 maListe.add(2,"Entre 2 et 3" );
+		 maListe.add(4,"Entre 3 et 4" );
+		 /* Iterator : objet permettant de parcourant les elements d'une liste  
+		  * Ici Iterator de String car Iterator d'une ArrayList de String  
+		  */
+		 Iterator<String> it = maListe.iterator();
+		 /*
+		  * it.hasNext() retourne true tant qu'il y a des elements dans la liste
+		  */
+		 while(it.hasNext()){
+		 	/* it.next() retourne l'element suivant de la liste ici directement une String
+		   *  
+		   * Autrement la version < java 5 :  
+		   *  
+		   *  	ArrayList maliste = new ArrayList();
+		   *  	maListe.add(monFromage);
+		   *  	Iterator it = maListe.iterator();
+		   *  	while(it.hasNext()){
+		   *    Fromage monFromage = (Fromage)it.next();
+		   *  }
+		   */
+		 	System.out.println(it.next());
+		 }
+		 /*  
+		  * remove(index) : supprime le ième element de la liste  
+		  * Ici on supprime les deux elements quel'on a ajouté tout à l'heure
+		  */
+		 maListe.remove(4);
+		 maListe.remove(2);
+		 Iterator<String> it2 = maListe.iterator();
+		 while(it2.hasNext()){
+		 	System.out.println(it2.next());
+		 }
+	}
+
+}

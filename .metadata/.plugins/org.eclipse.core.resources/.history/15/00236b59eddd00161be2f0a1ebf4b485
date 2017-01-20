@@ -1,0 +1,10 @@
+package fr.esiea.gnondoli.puig.pot_commun;
+
+
+import fr.esiea.gnondoli.puig.bag.Bag;
+
+public class PotCommun extends Bag{
+	
+	
+	
+}

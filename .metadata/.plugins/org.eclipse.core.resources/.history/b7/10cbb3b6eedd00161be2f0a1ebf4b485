@@ -1,0 +1,10 @@
+package fr.esiea.gnondoli.puig.main;
+
+import fr.esiea.gnondoli.puig.bag.Bag;
+
+public class test {
+	public static void main(String[] args) {
+		Bag.GetALetter();
+	}
+	
+}

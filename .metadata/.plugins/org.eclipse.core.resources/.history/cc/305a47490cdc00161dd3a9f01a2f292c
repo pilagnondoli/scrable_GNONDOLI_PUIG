@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+
+public class Alphabet extends letters {
+	
+	ArrayList ListOfLetter= new ArrayList();
+
+	public Alphabet(String letter) {
+		super(letter);
+		// TODO Auto-generated constructor stub
+	}
+
+}

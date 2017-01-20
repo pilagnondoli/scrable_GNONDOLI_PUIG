@@ -1,0 +1,63 @@
+package fr.esiea.gnondoli.puig.bag;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Random;
+
+public class Bag {
+	
+	protected static ArrayList<String> letters = new ArrayList<String>();
+	
+	
+
+	
+	
+	public static  void AddLettersToBag(ArrayList<String> letters) {
+		letters.add("a" );
+		letters.add("b" );
+		letters.add("c" );
+		letters.add("d" );
+		letters.add("e" );
+		letters.add("f" );
+		letters.add("g" );
+		letters.add("h" );
+		letters.add("i" );
+		letters.add("j" );
+		letters.add("k" );
+		letters.add("l" );
+		letters.add("m" );
+		letters.add("n" );
+		letters.add("o" );
+		letters.add("p" );
+		letters.add("q" );
+		letters.add("r" );
+		letters.add("s" );
+		letters.add("t" );
+		letters.add("u" );
+		letters.add("v" );
+		letters.add("w" );
+		letters.add("x" );
+		letters.add("y" );
+		letters.add("z" );
+		
+	}
+	public static void PrintValue(){
+		Iterator<String> it = letters.iterator();
+		 while(it.hasNext()){
+		 	
+		 	System.out.println(it.next());
+		 }
+	}
+	public static void GetALetter()
+	{
+		AddLettersToBag(letters);
+		Random LetterRandom = new Random();
+		int ValLetter  = LetterRandom.nextInt(26 - 0 + 1) + 0;
+		String LetterValue ;
+		LetterValue= letters.get(ValLetter);
+		System.out.println(LetterValue);
+		
+	}
+	
+
+}

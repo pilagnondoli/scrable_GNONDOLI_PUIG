@@ -1,0 +1,15 @@
+package fr.esiea.gnondoli.puig.main;
+
+//import fr.esiea.gnondoli.puig.bag.Bag;
+import fr.esiea.gnondoli.puig.pot_commun.PotCommun;
+
+public class test {
+	public static void main(String[] args) {
+		//test du bag
+		//Bag.GetALetter();
+		PotCommun.DebutDeTour();
+		PotCommun.MotReussi();
+		PotCommun.PrintTas();
+	}
+	
+}

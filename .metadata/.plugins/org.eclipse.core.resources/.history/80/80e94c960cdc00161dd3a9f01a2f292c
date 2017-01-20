@@ -1,0 +1,11 @@
+
+public class letters {
+	
+	String letter;
+	
+	public letters(String letter){
+		this.letter=letter;
+	}
+	
+
+}

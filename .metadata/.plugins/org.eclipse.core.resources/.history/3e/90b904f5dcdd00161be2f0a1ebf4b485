@@ -1,0 +1,5 @@
+package fr.esiea.gnondoli.puig;
+
+public interface pot_commun {
+
+}

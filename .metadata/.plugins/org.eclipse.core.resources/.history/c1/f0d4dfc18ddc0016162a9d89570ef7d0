@@ -1,0 +1,12 @@
+package fr.esiea.gnondoli.puig;
+
+public class letters {
+	
+	String letter;
+	
+	public letters(String letter){
+		this.letter=letter;
+	}
+	
+
+}

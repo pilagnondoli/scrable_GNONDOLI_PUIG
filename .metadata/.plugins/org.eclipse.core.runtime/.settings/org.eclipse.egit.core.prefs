@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=/home/etienne/Documents/cours/architecture/scrable_GNONDOLI_PUIG/git/.git\:/home/etienne/Documents/cours/architecture/scrable_GNONDOLI_PUIG/.git\:
-GitRepositoriesView.GitDirectories.relative=scrable_GNONDOLI_PUIG/git/.git\:scrable_GNONDOLI_PUIG/.git\:
+GitRepositoriesView.GitDirectories=/home/etienne/Documents/cours/architecture/scrable_GNONDOLI_PUIG/git/.git\:/home/etienne/Documents/cours/architecture/.git\:/home/etienne/Documents/cours/architecture/scrable_GNONDOLI_PUIG/.git\:
+GitRepositoriesView.GitDirectories.relative=scrable_GNONDOLI_PUIG/git/.git\:.git\:scrable_GNONDOLI_PUIG/.git\:
 core_defaultRepositoryDir=/home/etienne/eclipse/java-mars/eclipse
 eclipse.preferences.version=1

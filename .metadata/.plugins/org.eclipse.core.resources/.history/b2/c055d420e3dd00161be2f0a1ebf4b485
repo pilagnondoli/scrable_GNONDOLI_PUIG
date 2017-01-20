@@ -1,0 +1,27 @@
+package fr.esiea.gnondoli.puig.pot_commun;
+
+import java.util.Iterator;
+import java.util.Random;
+
+
+
+
+public interface PotCommun {
+	Random LetterRandom = new Random();
+	int ValLetter  = LetterRandom.nextInt(26 - 0 + 1) + 0;
+	Iterator<String> LetterValue = iterator();
+	
+	public static void GetNumberletter()
+	{
+		LetterValue= letters.get(ValLetter);
+		System.out.println(LetterValue);
+		
+	}
+
+	public static Iterator<String> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

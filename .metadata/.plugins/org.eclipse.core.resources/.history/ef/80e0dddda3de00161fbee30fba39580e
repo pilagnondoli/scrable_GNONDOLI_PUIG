@@ -1,0 +1,24 @@
+package fr.esiea.gnondoli.puig.joueur;
+
+import java.util.ArrayList;
+
+import fr.esiea.gnondoli.puig.pot_commun.PotCommun;
+
+public class Joueur {
+	
+	protected static ArrayList<String> LettresJoueur = new ArrayList<String>();
+	
+	
+	
+	public static void PrendreLettre(String LettrePris){
+		
+		for (int i=0;i<PotCommun.tas.size();i++){
+			if (LettrePris.equals(PotCommun.tas.get(i)) ){
+				LettresJoueur.add(LettrePris);
+				PotCommun.tas.remove(i);
+			}
+		}
+		
+	}
+
+}
