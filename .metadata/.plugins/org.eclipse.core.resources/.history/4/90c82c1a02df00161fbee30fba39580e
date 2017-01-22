@@ -1,0 +1,72 @@
+package fr.esiea.gnondoli.puig.joueur;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import fr.esiea.gnondoli.puig.pot_commun.PotCommun;
+
+public class Joueur {
+	
+	protected static ArrayList<String> LettresJoueur = new ArrayList<String>();
+	protected static ArrayList<String> MotTest = new ArrayList<String>();
+	protected static ArrayList<String> Mots = new ArrayList<String>();
+	protected static ArrayList<String> LettresTasTest = new ArrayList<String>();
+	static boolean MotValide = true;
+	
+	
+	public static void PrendreLettre(String LettrePris){
+		
+		for (int i=0;i<PotCommun.tas.size();i++){
+			if (LettrePris.equals(PotCommun.tas.get(i)) ){
+				LettresJoueur.add(LettrePris);
+				PotCommun.tas.remove(i);
+			}
+		}	
+	}
+	public static void Testmot(String MotSelect){
+		String[] TestMot=MotSelect.split("");
+		for(int i=0;i<PotCommun.tas.size();i++){
+			LettresTasTest.add(PotCommun.tas.get(i));
+		}
+		/*for(int i=0;i< TestMot.length;i++){
+		System.out.println(TestMot[i]+",");
+		}*/
+		
+		do{
+			for(int i=0;i< TestMot.length;i++){
+				for(int j=0;j<PotCommun.tas.size();j++){
+					if(j!=PotCommun.tas.size()-1){
+						if (MotSelect.equals(LettresTasTest.get(j)) ){
+							LettresTasTest.remove(i);
+						}
+					}
+					else{
+						if (MotSelect.equals(LettresTasTest.get(j)) ){
+							LettresTasTest.remove(i);
+						}
+						else{
+							MotValide=false;
+							break;
+						}
+					}
+				}
+			}
+		}while(MotValide == true);
+		if(MotValide==true){
+			Mots.add(MotSelect);
+			for(int i=0;i< Mots.size();i++){
+				System.out.println(Mots.get(i));
+			}
+			
+		}
+		
+	}
+	public static void PrintJoueurlettre(){
+		Iterator<String> it = LettresJoueur.iterator();
+		 while(it.hasNext()){
+		 	
+		 	System.out.println(it.next());
+		 }
+	}
+	
+}

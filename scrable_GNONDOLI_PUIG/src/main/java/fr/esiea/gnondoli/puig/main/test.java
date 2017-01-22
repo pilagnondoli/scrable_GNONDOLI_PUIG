@@ -21,8 +21,8 @@ public class test {
 			taille_MV = new Scanner(System.in); 
 			lettrepris = taille_MV.nextLine();
 		}while(lettrepris == "");
-		Joueur.PrendreLettre(lettrepris);
-		Joueur.PrintJoueurlettre();
+		Joueur.TestMots(lettrepris);
+		Joueur.PrintJoueurMots();
 		PotCommun.PrintTas();
 	}
 	

@@ -1,0 +1,82 @@
+package fr.esiea.gnondoli.puig.joueur;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import fr.esiea.gnondoli.puig.pot_commun.PotCommun;
+
+public class Joueur {
+	
+	protected static ArrayList<String> LettresJoueur = new ArrayList<String>();
+	protected static ArrayList<String> MotTest = new ArrayList<String>();	
+	protected static ArrayList<String> LettresTasTest = new ArrayList<String>();
+	protected static ArrayList<String> Mots = new ArrayList<String>();
+	static boolean MotValide = true;
+	
+	
+	public static void PrendreLettre(String LettrePris){
+		
+		for (int i=0;i<PotCommun.tas.size();i++){
+			if (LettrePris.equals(PotCommun.tas.get(i)) ){
+				LettresJoueur.add(LettrePris);
+				PotCommun.tas.remove(i);
+			}
+		}	
+	}
+	public static void TestMots(String MotSelect){
+		String[] TestMot=MotSelect.split("");
+		for(int i=0;i<PotCommun.tas.size();i++){
+			LettresTasTest.add(PotCommun.tas.get(i));
+		}		
+		do{
+			for(int i=0;i< TestMot.length;i++){
+				int j=0;
+				System.out.println(i);
+				do{
+					if (TestMot[i].equals(LettresTasTest.get(j)) ){
+						System.out.println("remove : "+LettresTasTest.get(j));
+						LettresTasTest.remove(j);
+					}
+					j++;
+					System.out.println("lettre choisi : "+ TestMot[i]+ ", "+j);
+				}while(j<LettresTasTest.size()-1);
+				
+				if (TestMot[i].equals(LettresTasTest.get(j)) && j==LettresTasTest.size()-1) {
+					System.out.println("remove : "+LettresTasTest.get(j));
+					LettresTasTest.remove(j);
+				}
+				
+				if (!TestMot[i].equals(LettresTasTest.get(j)) && j==LettresTasTest.size()-1){
+					System.out.println("mot impossible: "+MotSelect);
+					for (int k=0;k<LettresTasTest.size();k++){
+						LettresTasTest.remove(k);
+					}
+					for (int k=0;k<MotTest.size();k++){
+						MotTest.remove(k);
+					}
+					MotValide=false;
+				}
+				else{
+					
+				}
+				
+			}
+		}while(MotValide == true);
+		if(MotValide==true){
+			Mots.add(MotSelect);
+			for(int i=0;i< Mots.size();i++){
+				System.out.println("mot succed: " + Mots.get(i));
+			}
+			
+		}
+		
+	}
+	public static void PrintJoueurlettre(){
+		Iterator<String> it = LettresJoueur.iterator();
+		 while(it.hasNext()){
+		 	
+		 	System.out.println(it.next());
+		 }
+	}
+	
+}

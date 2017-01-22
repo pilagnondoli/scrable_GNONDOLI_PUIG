@@ -1,0 +1,79 @@
+package fr.esiea.gnondoli.puig.joueur;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import fr.esiea.gnondoli.puig.pot_commun.PotCommun;
+
+public class Joueur {
+	
+	protected static ArrayList<String> LettresJoueur = new ArrayList<String>();
+	protected static ArrayList<String> MotTest = new ArrayList<String>();
+	protected static ArrayList<String> Mots = new ArrayList<String>();
+	protected static ArrayList<String> LettresTasTest = new ArrayList<String>();
+	static boolean MotValide = true;
+	
+	
+	public static void PrendreLettre(String LettrePris){
+		
+		for (int i=0;i<PotCommun.tas.size();i++){
+			if (LettrePris.equals(PotCommun.tas.get(i)) ){
+				LettresJoueur.add(LettrePris);
+				PotCommun.tas.remove(i);
+			}
+		}	
+	}
+	public static void Testmot(String MotSelect){
+		String[] TestMot=MotSelect.split("");
+		for(int i=0;i<PotCommun.tas.size();i++){
+			LettresTasTest.add(PotCommun.tas.get(i));
+		}
+		//System.out.println(LettresTasTest.size());
+		/*for(int i=0;i< TestMot.length;i++){
+		System.out.println(TestMot[i]+",");
+		}*/
+		
+		do{
+			for(int i=0;i< TestMot.length;i++){
+				for(int j=0;j<LettresTasTest.size();j++){
+					System.out.println("1");
+					if(j!=PotCommun.tas.size()-1){
+						System.out.println("2");
+						if (TestMot[i].equals(LettresTasTest.get(j)) ){
+							System.out.println("3");
+							LettresTasTest.remove(i);
+						}
+					}
+					else{
+						System.out.println("4");
+						if (TestMot[i].equals(LettresTasTest.get(j))) {
+							System.out.println("5");
+							LettresTasTest.remove(i);
+						}
+						else{
+							System.out.println("6");
+							MotValide=false;
+							break;
+						}
+					}
+				}
+			}
+		}while(MotValide == true);
+		if(MotValide==true){
+			Mots.add(MotSelect);
+			for(int i=0;i< Mots.size();i++){
+				System.out.println(Mots.get(i));
+			}
+			
+		}
+		
+	}
+	public static void PrintJoueurlettre(){
+		Iterator<String> it = LettresJoueur.iterator();
+		 while(it.hasNext()){
+		 	
+		 	System.out.println(it.next());
+		 }
+	}
+	
+}
