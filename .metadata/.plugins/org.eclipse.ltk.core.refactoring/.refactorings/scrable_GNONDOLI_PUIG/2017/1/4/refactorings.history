@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;fr.esiea.gnondoli.puig.Dictonary.Dictionaire&apos; to &apos;Dictionnaire&apos;&#x0A;- Original project: &apos;scrable_GNONDOLI_PUIG&apos;&#x0A;- Original element: &apos;fr.esiea.gnondoli.puig.Dictonary.Dictionaire&apos;&#x0A;- Renamed element: &apos;fr.esiea.gnondoli.puig.Dictonary.Dictionnaire&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Dictionaire&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;fr.esiea.gnondoli.puig.Dictonary{Dictionaire.java[Dictionaire" matchStrategy="1" name="Dictionnaire" qualified="false" references="true" similarDeclarations="false" stamp="1485162664503" textual="false" version="1.0"/>
+</session>

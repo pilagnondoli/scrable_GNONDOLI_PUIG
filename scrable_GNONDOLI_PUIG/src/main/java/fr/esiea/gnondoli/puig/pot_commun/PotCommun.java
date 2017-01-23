@@ -12,6 +12,20 @@ public class PotCommun extends Bag{
 	public static void DebutDeTour(){
 		tas.add(Bag.GetALetter());
 		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
+		tas.add(Bag.GetALetter());
 	}
 	
 	public static void MotReussi(){
